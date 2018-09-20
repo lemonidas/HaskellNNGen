@@ -10,6 +10,18 @@ stack setup # If it is the first time running
 stack build
 ```
 
+### Execute
+
+After building, run a command of the following form:
+
+```
+stack exec HasNN-exe -- TestModule.hs -e 10000 --load=TwentyThousand.nn --save=ThirtyThousand.nn
+```
+
+This will train for 10000 iterations (`-e` flag), starting by loading
+the `TwentyThousand.nn` neural network and saving the result in `ThirtyThousand.nn`.
+All three flags are optional with the defaults found in `src/Shakespeare`.
+
 ### Layout
 
 The `src` directory contains most of the interesting files.

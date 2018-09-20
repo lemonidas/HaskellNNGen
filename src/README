@@ -1,0 +1,8 @@
+TestGHC version 0.0
+This is not a public release - do not distribute.
+
+===
+
+This is the implementation of a lambda term generator described in paper
+"Testing an optimising compiler by generating random lambda terms".
+

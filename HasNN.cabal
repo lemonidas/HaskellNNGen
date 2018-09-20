@@ -1,0 +1,111 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a7d1ffa22220e4663e0229ad8c5867dbbe369599133b206a805dc23e09af8cc5
+
+name:           HasNN
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/HasNN#readme>
+homepage:       https://github.com/githubuser/HasNN#readme
+bug-reports:    https://github.com/githubuser/HasNN/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+    
+source-repository head
+  type: git
+  location: https://github.com/githubuser/HasNN
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      MonadRandom
+    , QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , cereal
+    , containers
+    , grenade
+    , hmatrix
+    , mtl
+    , optparse-applicative
+    , parallel
+    , process
+    , singletons
+    , transformers
+    , vector
+    , array
+    , parsec
+  build-tools:
+      alex
+  exposed-modules:
+      DumpGHCTerms
+      Tokenizer
+      PalkaGenerator
+      Shakespeare
+  other-modules:
+      Paths_HasNN
+  default-language: Haskell2010
+
+executable HasNN-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HasNN
+    , MonadRandom
+    , QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , cereal
+    , containers
+    , grenade
+    , hmatrix
+    , mtl
+    , optparse-applicative
+    , parallel
+    , process
+    , singletons
+    , transformers
+    , vector
+  other-modules:
+      Paths_HasNN
+  default-language: Haskell2010
+
+test-suite HasNN-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HasNN
+    , MonadRandom
+    , QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , cereal
+    , containers
+    , grenade
+    , hmatrix
+    , mtl
+    , optparse-applicative
+    , parallel
+    , process
+    , singletons
+    , transformers
+    , vector
+  other-modules:
+      Paths_HasNN
+  default-language: Haskell2010
